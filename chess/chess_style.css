@@ -28,6 +28,7 @@
  border:solid 1px;
  padding: 10px;
  margin:10px;
+ background-color:lightyellow;
 }
 
 #container {
@@ -48,9 +49,18 @@
  text-align:center; 
  z-index:10;
   
- font-family: 'JustLettersMedium'; 
- font-weight: normal; 
- font-style: normal; 
+ font-family: 'OpenDyslexic3Regular';
+ font-weight: normal;
+ font-style: normal;
  font-size:36px;
+}
+
+img {
+ margin-left: 5px;
+ margin-top:10px;
+ }
+
+body {
+ background-image:url("https://fullyloaded.pizza/wp-content/uploads/2016/08/2brown-wood-texture-and-background-1170x780.jpg");
 }
 

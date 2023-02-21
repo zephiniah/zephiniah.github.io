@@ -9,25 +9,26 @@
     </title>
     
     <style type="text/css" xml:space="preserve">
-BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
-A{font-family: Arial,Verdana,Helvetica, sans-serif;}
-B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : bold;}
-.error_strings{ font-family:Verdana; font-size:14px; color:#660000;}
-</style>
-    
-    <script language="JavaScript" src="gen_validatorv4.js"
-    type="text/javascript" xml:space="preserve"></script>
-    
+
+    BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
+
+    A{font-family: Arial,Verdana,Helvetica, sans-serif;}
+
+    B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : bold;}
+
+    .error_strings{ font-family:Verdana; font-size:14px; color:#660000;}
+    </style>    
+
   </head>
   <body>
-    <form action="" name="myform" id="myform">
+    <form action="/portfolio/html/ThankYou.html" name="myForm" id="myform"  onsubmit="return validateForm();">
       <table cellspacing="2" cellpadding="2" border="0">
         <tr>
           <td align="right">
             First Name
           </td>
           <td>
-            <input type="text" name="FirstName" />
+            <input type="text" id="firstname" />
           </td>
         </tr>
         <tr>
@@ -35,7 +36,7 @@ B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : 
             Last Name
           </td>
           <td>
-            <input type="text" name="LastName" />
+            <input type="text" id="lastname" />
           </td>
         </tr>
         <tr>
@@ -43,7 +44,7 @@ B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : 
             EMail
           </td>
           <td>
-            <input type="text" name="Email" />
+            <input type="text" id="email" />
           </td>
         </tr>
         <tr>
@@ -51,7 +52,7 @@ B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : 
             Phone
           </td>
           <td>
-            <input type="text" name="Phone" />
+            <input type="text" id="phone" />
           </td>
         </tr>
            <tr>
@@ -59,7 +60,7 @@ B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : 
             Username
           </td>
           <td>
-            <input type="text" name="Username" />
+            <input type="text" id="username" />
           </td>
         </tr>
         <tr>
@@ -299,7 +300,8 @@ B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : 
         <tr>
           <td align="right"></td>
           <td>
-            <div id="myform_errorloc" class="error_strings">
+            <div id="errorMessages" class="error_strings">
+              
             </div>
           </td>
         </tr>
@@ -313,44 +315,8 @@ B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : 
         
       </table>
     </form>
-    
-    <script language="JavaScript" type="text/javascript"
-    xml:space="preserve">
-      
-//<![CDATA[
-  //You should create the validator only after the definition of the HTML form
-  var frmvalidator  = new Validator("myform");
-      
-  frmvalidator.EnableOnPageErrorDisplaySingleBox();
-  frmvalidator.EnableMsgsTogether();
- 
-  frmvalidator.addValidation("FirstName","req","Please enter your First Name");
-  frmvalidator.addValidation("FirstName","maxlen=20",	"Max length for FirstName is 20");
-  frmvalidator.addValidation("FirstName","alpha_s","Name can contain alphabetic chars only");
-  
-  frmvalidator.addValidation("LastName","req","Please enter your Last Name");
-  frmvalidator.addValidation("LastName","maxlen=50","For LastName, Max length is 50");
-  
-  frmvalidator.addValidation("Email","maxlen=50");
-  frmvalidator.addValidation("Email","req");
-  frmvalidator.addValidation("Email","email");
-  
-  frmvalidator.addValidation("Phone","req");
-  frmvalidator.addValidation("Phone","maxlen=15");
-  frmvalidator.addValidation("Phone","numeric");
-      
-  frmvalidator.addValidation("Username", "req");
-  frmvalidator.addValidation("Username", "maxlen=12", "Max length for Username is 12");      
-  
-  frmvalidator.addValidation("Address","req");
-      
-  frmvalidator.addValidation("City","req");
-  
-  frmvalidator.addValidation("State","dontselect=000");
-   
-  frmvalidator.addValidation("Country","dontselect=000");
-   
-//]]>
-    </script>
+
+    <script src="/js/reese_Artifact04.js"></script>
+
   </body>
 </html>
